@@ -1,37 +1,87 @@
-# FastAPI Document Chatbot
-
-This is a FastAPI-based document chatbot application that allows users to upload PDF documents, create a FAISS vector store, and interact with the documents via chat using language models.
-
-## Installation Instructions
-
-### Step 1: Clone the repository
-Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/smeett247/Scan_pro__audio_chatbot.git
-cd Scan_pro__audio_chatbot
 
 
-### What is happening in the code?
+# Crustdata API Chatbot
 
-- **FastAPI Setup**: The FastAPI app is created and CORS middleware is added to allow frontend requests from `localhost:5173`.
-- **File Uploads**: The `/upload/` endpoint allows multiple PDFs to be uploaded. These files are saved locally and processed to extract text.
-- **FAISS Vector Store**: The text from uploaded PDFs is used to create a FAISS vector store, which is serialized and saved in the file `faiss_index.pkl`.
-- **Chat with Documents**: The `/chat/` endpoint allows the user to query the uploaded documents. The query is sent to an external NVIDIA API to rank relevant passages from the documents.
-- **Environment Variable for API Key**: The NVIDIA API key is stored in a `.env` file, which is loaded using the `python-dotenv` package for secure handling.
--**In the server folder, there is a main.py file. To run this Python file, use the following command**: uvicorn main:app --reload
+This repository contains a Crustdata API chatbot designed to assist users with API-related queries. The application has a frontend built with React and a backend implemented using FastAPI.
+
+---
+
+## 🚀 Getting Started
+
+Follow the steps below to set up and run the project.
+
+---
+
+### 🖥️ Frontend Setup
+
+1. **Clone the Repository**  
+   ```bash
+   git clone <your-repository-url>
+   cd <your-repository-folder>
+
+	2.	Navigate to the Client Directory
+
+cd client
 
 
-  
-!
+	3.	Install Dependencies
+
+npm install
 
 
-# STREAMLIT
+	4.	Run the Development Server
+
+npm run dev
+
+The frontend should now be running on http://localhost:5173 (or another port specified in the terminal).
+
+🛠️ Backend Setup (FastAPI)
+	1.	Navigate to the Server Directory
+
+cd ../server
 
 
-### Key Additions:
+	2.	Set Up the Virtual Environment
 
-1. **Run the Streamlit Application**: 
-   - The command `streamlit run nvidia_chatbot_streamlit.py` is included with instructions on how to replace it with the actual script name.
+python -m venv env
+source env/bin/activate  # On Windows, use `env\Scripts\activate`
 
-This should give users clear steps on how to set up and run the app.
+
+	3.	Install Requirements
+
+pip install -r requirements.txt
+
+
+	4.	Run the FastAPI Server
+
+uvicorn main:app --reload
+
+The backend should now be running on http://localhost:8000.
+
+🧪 Testing Your Chatbot
+
+Here are five example questions to test the chatbot:
+	1.	“How can I use the Company Data Enrichment API to fetch data for multiple companies by their domains?”
+	•	Tests the chatbot’s understanding of API parameters and request structure.
+	2.	“What fields are available when using the fields parameter in the Company Data API?”
+	•	Validates field-level and nested field explanations.
+	3.	“How do I retrieve LinkedIn posts for a specific company using the LinkedIn Posts by Company API?”
+	•	Evaluates endpoint-specific usage knowledge.
+	4.	“What is the maximum number of companies I can screen in a single API request using the Screening API?”
+	•	Checks knowledge about API limitations.
+	5.	“What error will I get if I request unauthorized fields in an API response?”
+	•	Tests error handling and permissions information.
+
+📸 Example Screenshots
+
+Example 1: Chatbot Interface
+
+Example 2: API Query and Response
+
+Example 3: Error Handling Display
+
+📝 Notes
+	•	Ensure the frontend and backend are running on their respective ports before testing the chatbot.
+	•	Update .env files for any necessary API keys or configuration.
+	•	The chatbot relies on vectorized Crustdata documentation for accurate answers.
+
