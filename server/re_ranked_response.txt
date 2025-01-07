@@ -59,3 +59,23 @@ Specifically, the error response will contain a JSON object with the following s
 ```
 This error occurs when you attempt to access fields that are not included in your authorized scope or when you don't have the necessary permissions to access certain fields.
 
+Query: Hello
+Response: Hello! Welcome to Crustdata's API support. I'm here to help you with any questions or issues you have regarding our APIs, including Company Data Enrichment, LinkedIn Company Search, LinkedIn Posts by Company, People Profile Enrichment, Screening, and Dataset APIs. What can I assist you with today?
+
+Query: How can I use the Company Data Enrichment API to fetch data for multiple companies by their domains?
+Response: To fetch data for multiple companies using the Company Data Enrichment API, follow these steps:
+
+* Use the `company_domain` parameter with a comma-separated list of up to 25 domains.
+* Include the `auth_token` in the header for authorization.
+* Optionally, specify the fields to be returned using the `fields` parameter.
+
+Example Request:
+```
+curl 'https://api.crustdata.com/screener/company?company_domain=example.com,other.com,another.com' \
+  --header 'Authorization: Token $auth_token' \
+  --header 'Accept: application/json'
+```
+Default fields in the response include top-level company data unless specified using the `fields` parameter.
+
+Note: The `company_domain` parameter accepts a maximum of 25 domains per request. Exceeding this limit may result in an error.
+
