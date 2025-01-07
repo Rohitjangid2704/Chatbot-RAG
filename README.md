@@ -76,7 +76,7 @@ Here are five example questions to test the chatbot:
 
 Example 1: Chatbot Interface
 
-![Interface Image](https://raw.githubusercontent.com/Rohitjangid2704/Crustdata-API-Chatbot/main/client/public/interface.png)
+![Interface](https://github.com/Rohitjangid2704/Crustdata-API-Chatbot/blob/main/client/public/interface.png?raw=true)
 
 
 Example 2: API Query and Response
