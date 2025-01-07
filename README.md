@@ -76,9 +76,13 @@ Here are five example questions to test the chatbot:
 
 Example 1: Chatbot Interface
 
+![Interface Image](https://raw.githubusercontent.com/Rohitjangid2704/Crustdata-API-Chatbot/main/client/public/interface.png)
+
+
 Example 2: API Query and Response
 
-Example 3: Error Handling Display
+![QA Image](https://github.com/Rohitjangid2704/Crustdata-API-Chatbot/blob/main/client/public/qa.png)
+
 
 📝 Notes
 	•	Ensure the frontend and backend are running on their respective ports before testing the chatbot.
